@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(./image/hm.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 150px;
+}
+
+.main {
+    flex: 1;
+    text-align: right;
+}
+
+.main ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.main ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.main ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.main ul li:hover:after {
+    width: 100%;
+}
+
+.text-box {
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 60px;
+}
+
+.text-box p {
+    margin: 10px 0px 40px;
+    font-size: 14px;
+    color: white;
+}
+
+nav .fa {
+    display: none;
+}
+
+
+@media(max-width: 700px) {
+    .text-box h1 {
+        font-size: 20px;
+    }
+
+    .main ul li {
+        display: block;
+    }
+
+    .main {
+        position: absolute;
+        background: rgb(11, 73, 112);
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        text-align: left;
+        transition: 1s;
+    }
+
+    nav .fa {
+        display: block;
+        color: white;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .main ul {
+        padding: 30px;
+    }
+}
